@@ -30,17 +30,17 @@ def calculate(csv_string: str):
             cost += temp_daytime_minute_cost
         else:
             cost += temp_night_minute_cost
-    targets[number][start_datetime] = {"time": delta_time, "cost": float(cost)}
-    targets[number]["total_cost"] += float(cost)
+    targets[number][start_datetime] = {"time": delta_time, "cost": cost}
+    targets[number]["total_cost"] += cost
 
 
-def total_cost() -> int:
+def total_cost() -> str:
     total = 0
     most_called = list(targets.keys())[list(targets.values()).index(max(targets.values(), key=len))]
     targets.pop(most_called)
     for j in targets:
         total += targets[j]["total_cost"]
-    return total
+    return "%.1f" % total  # need to format it because of floating point precision error
 
 
 if __name__ == '__main__':
