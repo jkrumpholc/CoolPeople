@@ -1,0 +1,2 @@
+May he create simple page with table of contacts? Table will have columns First Name, Surname, Email, Phone Number, Action. In Action column will be text ‘Remove’ to remove contact. Above the table will be fields for First Name, Surname, Email and Phone together with Add button. After clicking the Add button the contact will be added to the table.
+It should be done in React, just the javascript, no backend. So when the user opens the page it will be empty or might be prefilled with some default contacts.
